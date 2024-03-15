@@ -61,7 +61,12 @@ const Navbar = () => {
                         }
                         if (!hideInNav && children.length === 0) {
                             return (
-                                <li key={index}>
+                                <li
+                                    key={index}
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                    }}
+                                >
                                     <NavLink
                                         to={path}
                                         className={({ isActive }) =>
